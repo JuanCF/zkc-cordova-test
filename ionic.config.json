@@ -1,5 +1,7 @@
 {
   "name": "pr3test",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
