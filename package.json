@@ -32,6 +32,7 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-plugin-zkcservice": "git+https://github.com/JuanCF/cordova-plugin-zkcservice.git",
     "core-js": "^2.5.4",
     "css-vars-ponyfill": "^1.17.2",
     "rxjs": "~6.3.3",
@@ -74,7 +75,8 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-intermecpr": {}
+      "cordova-plugin-intermecpr": {},
+      "cordova-plugin-zkcservice": {}
     },
     "platforms": [
       "android"
