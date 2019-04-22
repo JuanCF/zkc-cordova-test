@@ -39,6 +39,42 @@ export class HomePage {
       })
   }
 
+  turnOnPrinter(){
+    cordova.plugins.ZKCService.turnOnPrinter("hola",
+      (success)=>{
+        console.log(success);
+      },(error)=>{
+        console.log(error);
+      })
+  }
+
+  getPrinterStatus(){
+    cordova.plugins.ZKCService.getPrinterStatus("hola",
+      (success)=>{
+        console.log(success);
+      },(error)=>{
+        console.log(error);
+      })
+  }
+
+  turnOffPrinter(){
+    cordova.plugins.ZKCService.turnOffPrinter("hola",
+      (success)=>{
+        console.log(success);
+      },(error)=>{
+        console.log(error);
+      })
+  }
+
+  testPrinter(){
+    cordova.plugins.ZKCService.testPrinter("hola",
+      (success)=>{
+        console.log(success);
+      },(error)=>{
+        console.log(error);
+      })
+  }
+
   testCoolMethod(){
     cordova.plugins.IntermecPr.coolMethod("hola desde el plugin",
       (success)=>{
