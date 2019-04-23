@@ -34,6 +34,7 @@ export class HomePage {
     cordova.plugins.ZKCService.bindZKCService({},
       (success)=>{
         console.log(success);
+        this.ToastIt(JSON.stringify(success));
       },(error)=>{
         console.log(error);
       })
@@ -66,8 +67,37 @@ export class HomePage {
       })
   }
 
+  turnOnScanner(){
+    cordova.plugins.ZKCService.turnOnScanner({},
+      (success)=>{
+        //console.log(success);
+        this.ToastIt(success);
+      },(error)=>{
+        console.log(error);
+      })
+  }
+
+  turnOffScanner(){
+    cordova.plugins.ZKCService.turnOffScanner({},
+      (success)=>{
+        //console.log(success);
+        this.ToastIt(success);
+      },(error)=>{
+        console.log(error);
+      })
+  }
+
   testPrinter(){
     cordova.plugins.ZKCService.testPrinter("w56x1vg4y",
+      (success)=>{
+        console.log(success);
+      },(error)=>{
+        console.log(error);
+      })
+  }
+
+  ToastIt(result){
+    cordova.plugins.ZKCService.ToastIt(result,
       (success)=>{
         console.log(success);
       },(error)=>{
