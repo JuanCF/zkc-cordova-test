@@ -31,7 +31,7 @@ export class HomePage {
   }
 
   bindToZCKService(){
-    cordova.plugins.ZKCService.bindZKCService("hola",
+    cordova.plugins.ZKCService.bindZKCService({},
       (success)=>{
         console.log(success);
       },(error)=>{
@@ -40,7 +40,7 @@ export class HomePage {
   }
 
   turnOnPrinter(){
-    cordova.plugins.ZKCService.turnOnPrinter("hola",
+    cordova.plugins.ZKCService.turnOnPrinter({},
       (success)=>{
         console.log(success);
       },(error)=>{
@@ -49,7 +49,7 @@ export class HomePage {
   }
 
   getPrinterStatus(){
-    cordova.plugins.ZKCService.getPrinterStatus("hola",
+    cordova.plugins.ZKCService.getPrinterStatus({},
       (success)=>{
         console.log(success);
       },(error)=>{
@@ -58,7 +58,7 @@ export class HomePage {
   }
 
   turnOffPrinter(){
-    cordova.plugins.ZKCService.turnOffPrinter("hola",
+    cordova.plugins.ZKCService.turnOffPrinter({},
       (success)=>{
         console.log(success);
       },(error)=>{
@@ -67,7 +67,7 @@ export class HomePage {
   }
 
   testPrinter(){
-    cordova.plugins.ZKCService.testPrinter("hola",
+    cordova.plugins.ZKCService.testPrinter("w56x1vg4y",
       (success)=>{
         console.log(success);
       },(error)=>{
