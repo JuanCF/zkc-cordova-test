@@ -45,6 +45,7 @@ export class HomePage {
     cordova.plugins.ZKCService.turnOnPrinter({},
       (success)=>{
         console.log(success);
+        this.ToastIt(success);
       },(error)=>{
         console.log(error);
       })
