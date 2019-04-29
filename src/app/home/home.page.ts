@@ -108,6 +108,9 @@ export class HomePage {
           "image":base64Image
         },
         {
+          "qrtext":"Josue, estas loco vos va?"
+        },
+        {
           "text":text,
           "align":1
         }
