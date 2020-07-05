@@ -24,13 +24,14 @@
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.1.0",
-    "cordova-android": "8.0.0",
+    "cordova-android": "8.1.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-intermecpr": "git+https://github.com/JuanCF/cordova-pr3-plugin.git",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
     "cordova-plugin-ionic-webview": "^3.1.2",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-swklp": "git+https://github.com/JuanCF/cordova-plugin-swklp.git",
     "cordova-plugin-whitelist": "^1.3.3",
     "cordova-plugin-zkcservice": "git+https://github.com/JuanCF/cordova-plugin-zkcservice.git",
     "core-js": "^2.5.4",
@@ -76,7 +77,8 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-intermecpr": {},
-      "cordova-plugin-zkcservice": {}
+      "cordova-plugin-zkcservice": {},
+      "cordova-plugin-swklp": {}
     },
     "platforms": [
       "android"
