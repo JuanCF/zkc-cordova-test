@@ -11,6 +11,7 @@ declare let cordova: any;
 export class HomePage {
 
   subscription:any;
+  devices: any[];
 
   constructor(private platform: Platform) {
 
@@ -109,13 +110,8 @@ export class HomePage {
     let text16 = "ACHABACANAMIENTO";
     let text32 = "SUPERCALIFRAGILISTICOEXPIALIDOSO";
     let text36 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-    /*cordova.plugins.ZKCService.printBase64Image({"image":base64Image},
-      (success)=>{
-        console.log(success);
-      },(error)=>{
-        console.log(error);
-      })*/
-    cordova.plugins.jziotPrinter.printBulkData({
+
+    cordova.plugins.sewooklp.printBulkData({
       "printableObjects":[
         {
           "image":base64Image,
@@ -156,7 +152,11 @@ export class HomePage {
         },
         {
           "qrtext":"Si no estoy en un lugar, buscame en otro."
-        }
+        },
+		{
+          "text":text36,
+          "align":1
+        },
       ]
     },
       (success)=>{
@@ -164,27 +164,6 @@ export class HomePage {
       },(error)=>{
         console.log(error);
       })
-    /*cordova.plugins.ZKCService.printBulkData({
-      "printableObjects":[
-        {
-          "image":base64Image,
-          "margin_left":10
-        },
-        {
-          "qrtext":"Josue, estas loco vos va?"
-        },
-        {
-          "text":text,
-          "align":1
-        }
-      ]
-    },
-      (success)=>{
-        console.log(success);
-      },(error)=>{
-        console.log(error);
-      })*/
-
   }
 
   testPrintText(){
@@ -229,8 +208,26 @@ export class HomePage {
 
   listPairedDevices(){
     cordova.plugins.sewooklp.listPairedDevices({},
-      (success)=>{
-        console.log(success);
+      (result)=>{
+		this.devices = result;
+      },(error)=>{
+        console.log(error);
+      });
+  }
+
+  connectToSelectedDevice(deviceMAC){
+	  cordova.plugins.sewooklp.connectToDevice(deviceMAC,
+      (result)=>{
+		console.log(result);
+      },(error)=>{
+        console.log(error);
+      });
+  }
+
+  disconnectFromCurrentDevice(){
+	  cordova.plugins.sewooklp.disconnectFromDevice({},
+      (result)=>{
+		console.log(result);
       },(error)=>{
         console.log(error);
       });

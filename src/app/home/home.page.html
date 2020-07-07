@@ -21,8 +21,10 @@
     <ion-button (click)="turnOffScanner()" >Turn Off Scanner</ion-button>-->
 		<ion-button (click)="turnOnBluetooth()">Turn On Bluetooth</ion-button>
 		<ion-button (click)="listPairedDevices()">List Paired Devices</ion-button>
+		<ion-button (click)="testPrinter()" >Print Bulk</ion-button>
+		<ion-button (click)="disconnectFromCurrentDevice()">Disconnect From Connected Device</ion-button>
 		<ion-list>
-			<ion-item *ngFor="let device of devices">
+			<ion-item *ngFor="let device of devices" (click)="connectToSelectedDevice(device.address)">
 				<ion-label>{{ device.name }}</ion-label>
 				<ion-label>{{ device.address }}</ion-label>
 				<ion-label>{{ device.deviceType }}</ion-label>
